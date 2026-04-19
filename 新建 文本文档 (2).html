@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恒新绿源 | 智能垃圾分类存储机器人</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(16, 185, 129, 0.5);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle at 70% 30%, rgba(16, 185, 129, 0.15) 0%, #0f172a 70%);
+        }
+
+        .product-shadow {
+            filter: drop-shadow(0 0 30px rgba(16, 185, 129, 0.3));
+            animation: pulse-shadow 4s infinite;
+        }
+
+        @keyframes pulse-shadow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.2)); }
+            50% { filter: drop-shadow(0 0 40px rgba(16, 185, 129, 0.5)); }
+        }
+
+        .led-dot { width: 10px; height: 10px; border-radius: 50%; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 glass-card border-none bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-900/20">
+                    <i class="fas fa-leaf text-white text-lg"></i>
+                </div>
+                <span class="text-2xl font-black tracking-tighter italic">恒新绿源</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-sm font-bold tracking-widest uppercase">
+                <a href="#home" class="hover:text-emerald-400 transition-colors">首页</a>
+                <a href="#tech" class="hover:text-emerald-400 transition-colors">技术架构</a>
+                <a href="#intro" class="hover:text-emerald-400 transition-colors">关于项目</a>
+                <a href="#contact" class="px-5 py-2 bg-emerald-500/10 border border-emerald-500/50 rounded-full hover:bg-emerald-500 hover:text-white transition-all">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center pt-24 hero-bg px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <h1 class="text-6xl md:text-8xl font-black leading-none mb-6">
+                    智理未来<br><span class="text-gradient">分类存储</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 font-light tracking-widest uppercase">
+                    智能识别 / 语音交互 / FPGA 加速 / 云端互联
+                </p>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="glass-card p-5 rounded-2xl text-center">
+                        <div class="text-emerald-400 font-bold text-xl mb-1">立体</div>
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest">主机架构</div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl text-center">
+                        <div class="text-blue-400 font-bold text-xl mb-1">可视</div>
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest">交互场景</div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl text-center">
+                        <div class="text-purple-400 font-bold text-xl mb-1">精准</div>
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest">逻辑投放</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 flex justify-center">
+                <img src="aaaa.png" alt="智能垃圾桶" class="w-full max-w-lg product-shadow hover:scale-105 transition-transform duration-700">
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-32 bg-[#0a0f1d] px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black mb-4">技术与创新剖析</h2>
+                <p class="text-emerald-400 tracking-[0.3em] font-bold">智能三扇区旋转分类系统</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-3 space-y-8">
+                    <div class="glass-card p-6 rounded-3xl border-l-4 border-l-emerald-500">
+                        <i class="fas fa-video text-emerald-400 text-2xl mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2">色标识别摄像头</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">基于高精度视觉算法，通过物体色标特征判断所属类别，确保分类逻辑万无一失。</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-3xl border-l-4 border-l-blue-500">
+                        <i class="fas fa-cloud-upload-alt text-blue-400 text-2xl mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2">L610 物联网模组</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">实时同步仓储状态至华为云 IoT 平台，支持满溢主动告警与移动端远程状态监控。</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 relative group">
+                    <div class="absolute -inset-4 bg-emerald-500/10 rounded-full blur-3xl opacity-50"></div>
+                    <div class="glass-card p-2 rounded-[2rem] overflow-hidden">
+                        <img src="aaaa.png" alt="结构剖析" class="w-full rounded-[1.8rem] brightness-110 group-hover:scale-110 transition-transform duration-1000">
+                        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-4 bg-black/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
+                            <div class="led-dot bg-blue-500 shadow-[0_0_10px_#3b82f6]"></div>
+                            <div class="led-dot bg-emerald-500 shadow-[0_0_10px_#10b981]"></div>
+                            <div class="led-dot bg-red-500 shadow-[0_0_10px_#ef4444]"></div>
+                            <span class="text-[10px] text-gray-300 font-bold tracking-tighter">外部满载状态指示灯</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-8">
+                    <div class="glass-card p-6 rounded-3xl border-r-4 border-r-orange-500 text-right">
+                        <i class="fas fa-bullseye text-orange-400 text-2xl mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2">非接触开盖感应</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">集成红外与超声波避障传感器，人近即开，保持10cm安全距离，兼顾交互体验与卫生。</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-3xl border-r-4 border-r-purple-500 text-right">
+                        <i class="fas fa-microchip text-purple-400 text-2xl mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2">FPGA 并行加速</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">利用 Artix-7 强大的并行处理能力，实现从视觉识别到舵机旋转的毫秒级硬核响应。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
+            <div class="space-y-8">
+                <div class="inline-block px-4 py-1 bg-red-500/20 text-red-500 text-sm font-bold rounded-lg uppercase tracking-tighter">Company Profile</div>
+                <h2 class="text-4xl font-black">关于 恒新绿源</h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    我们致力于通过 FPGA 硬件加速与 AIoT 技术重塑废弃物管理。我们的机器人深度融合了并行处理架构与多模态交互感应，实现了从“指导投放”到“云端监控”的全链路智能化。
+                </p>
+                <div class="p-8 border border-white/5 rounded-3xl bg-white/[0.02]">
+                    <div class="grid grid-cols-2 gap-y-6 text-sm">
+                        <div>
+                            <span class="block text-gray-500 mb-1 uppercase text-[10px] tracking-widest">项目</span>
+                            <span class="font-bold">智能分类存储机器人</span>
+                        </div>
+                        <div>
+                            <span class="block text-gray-500 mb-1 uppercase text-[10px] tracking-widest">时间</span>
+                            <span class="font-bold">2026年度</span>
+                        </div>
+                        <div class="col-span-2">
+                            <span class="block text-gray-500 mb-1 uppercase text-[10px] tracking-widest">技术栈</span>
+                            <span class="font-bold text-emerald-400">FPGA / L610 IoT / Android 嵌入式 / 传感器融合</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="inline-block px-4 py-1 bg-blue-500/20 text-blue-500 text-sm font-bold rounded-lg uppercase tracking-tighter">Mode System</div>
+                <h2 class="text-4xl font-black">运行模式设计</h2>
+                <div class="space-y-4">
+                    <div class="glass-card p-8 rounded-[2rem] group hover:bg-emerald-500/10 transition-colors">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center text-emerald-500">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">日常运行模式</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 leading-relaxed">全自动流程：语音引导投放 -> 视觉颜色识别 -> 三扇区精准定位 -> 满溢云端上报。</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-[2rem] group hover:bg-blue-500/10 transition-colors">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-500/20 flex items-center justify-center text-blue-500">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">工程维护模式</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 leading-relaxed">独立调试流程：伺服电机回转测试、传感器原始数据回传、GUI 故障诊断与指令控制。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-24 bg-slate-900 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-black mb-4">准备好体验未来了吗？</h2>
+                <p class="text-gray-500 font-light">如果您对该项目感兴趣，欢迎通过以下方式取得联系。</p>
+            </div>
+            <div class="glass-card p-8 rounded-[2.5rem] flex flex-col sm:flex-row gap-8 sm:gap-16">
+                <div>
+                    <span class="block text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-2">联系电话</span>
+                    <span class="text-2xl font-black text-emerald-400">182-XXXX-XXXX</span>
+                </div>
+                <div>
+                    <span class="block text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-2">负责人</span>
+                    <span class="text-2xl font-black">黄某</span>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 text-center text-[10px] text-gray-600 tracking-widest uppercase">
+            © 2026 恒新绿源 智能实验室 | 智理未来，始于分类
+        </div>
+    </footer>
+
+</body>
+</html>
